@@ -158,7 +158,8 @@ header {
     height: auto;
     z-index: 10;
     margin-top: -240px;
-    margin-right: 450px; /* Ajuste a distância da borda direita */
+    margin-right: 600px; /* Ajuste a distância da borda direita */
     border: 2px solid red;
     
 }
+
