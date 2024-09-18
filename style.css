@@ -1,17 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    font-family: Arial, sans-serif;
     padding: 0;
 }
 
-/* A barra de navegação lá em cima */
+.overlay {
+    position: relative;
+    height: 300px;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Ajustado */
+    color: white;
+    text-align: center;
+}
+
+.imagem-overlay {
+    width: 500px;
+    height: auto;
+    margin-bottom: 20px; 
+}
+
 .navbar {
     overflow: hidden;
     background-color: #d70000;
-    position: fixed;
+    position: fixed; 
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; 
     display: flex;
     justify-content: space-around;
 }
@@ -29,12 +47,16 @@ body {
     background-color: #ff0000;
 }
 
-/* Ajustes para a largura da página sem alterar a posição dos elementos */
+.content {
+    padding: 16px;
+    margin-top: 50px;
+}
+
 header {
+    background-color: rgba(31, 31, 31, 0.5); /* Ajustado */
     text-align: center;
     padding: 10px;
-    background-color: #0056b3;
-}
+}  
 
 .footer {
     background-color: #000000;
@@ -46,8 +68,7 @@ header {
 .footer .contact-info,
 .footer .social-links,
 .footer .copyright {
-    margin: 10px auto;
-    max-width: 1000px;
+    margin: 10px 0;
 }
 
 .footer .social-links a {
@@ -61,15 +82,9 @@ header {
     text-decoration: underline;
 }
 
-.cursos a {
-    color: #ff0000;
-    flex-direction: column;
-    display: flex;
-}
-
 .logo img {
     width: 70px;
-    border-radius: 50%;
+    border-radius: 50%;   
     height: 70px;
     border: 1px solid rgb(0, 0, 0);
 }
@@ -79,12 +94,12 @@ header {
     position: absolute;
     left: 20px;
     top: 70px;
-    width: 150px;
-    height: auto;
+    width: 150px; 
+    height: auto; 
 }
 
 .sobre img {
-    width: 500px; /* Mantido tamanho fixo para garantir consistência */
+    width: 500px;
 }
 
 .sobre {
@@ -95,31 +110,19 @@ header {
     display: flex;
     justify-content: end;
     flex-direction: column;
-    z-index: 890;
-}
-
-.h1{
-
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 130px;
-    top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container h1 {
     display: flex;
     justify-content: flex-end;
-    padding-right: 130px;
-    z-index: 890;
-    padding-top: 10px;
+    padding-right: 75px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Button_home1 {
-    position: absolute;
-    right: 170px;
-    top: 590px;
+    position: absolute; /* Ajustado */
+    right: 120px; /* Ajuste conforme necessário */
+    top: 660px; /* Ajuste conforme necessário */
     display: flex;
     justify-content: flex-end;
 }
@@ -142,110 +145,21 @@ header {
     color: white;
 }
 
-.imags {
-    margin-top: 5px;
-    text-align: right;
+.imags{
+
+    margin-top: 20px;
+    text-align: right; /* Alinha a imagem à direita */
 }
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.course-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    transition: transform 0.3s;
-    margin: 10px;
-}
+  .imags img{
 
-.course-card:hover {
-    transform: scale(1.05);
-}
-
-.course-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.course-content {
-    padding: 15px;
-}
-
-.course-title {
-    font-size: 1.5em;
-    margin: 0;
-    color: #333;
-}
-
-.course-description {
-    font-size: 1em;
-    color: #666;
-}
-
-.course-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #ff0000;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.course-button:hover {
-    background-color: #ffffff;
-}
-
-.imags img {
-    width: 470px; /* Mantido tamanho fixo */
+    width: 470px;
     height: auto;
-    z-index: 900;
-    margin-top: -145px;
-    margin-right: 490px;
+    z-index: 10;
+    margin-top: -240px;
+    margin-right: 400px; /* Ajuste a distância da borda direita */
     border: 2px solid red;
+    
 }
 
-.destaques_img {
-    justify-content: center;
-    padding: 180px;
-    background-color: #000000;
-    margin-top: -80px;
-}
-
-.destaques {
-    justify-content: center;
-    text-align: center;
-}
-
-.title {
-    display: flex;
-    position: absolute;
-    z-index: 50;
-    color: rgb(255, 255, 255);
-    top: 790px; /* Mantido tamanho fixo */
-    left: 510px; /* Mantido posição fixa */
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
-    font-size: 35px;
-    overflow: hidden;
-}
-
-.image-container {
-    background-image: url("https://scontent.fgru6-1.fna.fbcdn.net/v/t1.6435-9/76651668_2500059620099120_2042647606588342272_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=2a1932&_nc_ohc=0DEjtj_1kBEQ7kNvgH1dI87&_nc_ht=scontent.fgru6-1.fna&oh=00_AYCBtyf11mFGLbYdOXElD6yVVSCA7idlyTCoXg-8a9nXhQ&oe=66E45F81");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 450px;
-    position: relative;
-}
